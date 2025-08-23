@@ -12,6 +12,7 @@ import Inventory2OutlinedIcon from '@mui/icons-material/Inventory2Outlined';
 import StarBorderIcon from '@mui/icons-material/StarBorder';
 import LocalOfferOutlinedIcon from '@mui/icons-material/LocalOfferOutlined';
 import ShoppingCartOutlinedIcon from '@mui/icons-material/ShoppingCartOutlined';
+import PeopleOutlineIcon from '@mui/icons-material/PeopleOutline';
 import { Link, useLocation } from "react-router-dom";
 
 const drawerWidth = 240;
@@ -51,9 +52,16 @@ function ResponsiveDrawer(props) {
          <Link to={'/admin/products'}>
          <div className={`flex items-center rounded-2xl p-3 gap-2 hover:bg-gray-200 duration-150 ${location.pathname === "/admin/products" ? "bg-blue-100 text-blue-900" : "bg-white"}`}><Inventory2OutlinedIcon/><p className='text-l font-extralight'>Products</p></div>
          </Link>
-         <div className={`flex items-center rounded-2xl p-3 gap-2 hover:bg-gray-200 duration-150 ${location.pathname === "" ? "bg-blue-100 text-blue-900" : "bg-white"}`}><StarBorderIcon/><p className='text-l font-extralight'>Featured Products</p></div>
-         <div className={`flex items-center rounded-2xl p-3 gap-2 hover:bg-gray-200 duration-150 ${location.pathname === "" ? "bg-blue-100 text-blue-900" : "bg-white"}`}><LocalOfferOutlinedIcon/><p className='text-l font-extralight'>Discounts</p></div>
+         <Link to={'/admin/featured'}>
+         <div className={`flex items-center rounded-2xl p-3 gap-2 hover:bg-gray-200 duration-150 ${location.pathname === "/admin/featured" ? "bg-blue-100 text-blue-900" : "bg-white"}`}><StarBorderIcon/><p className='text-l font-extralight'>Featured Products</p></div>
+         </Link>
+         <Link to={'/admin/discounts'}>
+         <div className={`flex items-center rounded-2xl p-3 gap-2 hover:bg-gray-200 duration-150 ${location.pathname === "/admin/discounts" ? "bg-blue-100 text-blue-900" : "bg-white"}`}><LocalOfferOutlinedIcon/><p className='text-l font-extralight'>Discounts</p></div>
+         </Link>
+         <Link to={'/admin/orders'}>
          <div className={`flex items-center rounded-2xl p-3 gap-2 hover:bg-gray-200 duration-150 ${location.pathname === "" ? "bg-blue-100 text-blue-900" : "bg-white"}`}><ShoppingCartOutlinedIcon/><p className='text-l font-extralight'>Orders</p></div>
+         </Link>
+         <div className={`flex items-center rounded-2xl p-3 gap-2 hover:bg-gray-200 duration-150 ${location.pathname === "" ? "bg-blue-100 text-blue-900" : "bg-white"}`}><PeopleOutlineIcon/><p className='text-l font-extralight'>Customers</p></div>
        </div>
       <Divider />
     </div>

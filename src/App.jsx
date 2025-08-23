@@ -12,6 +12,9 @@ import AdminPage from './components/AdminPage.jsx';
 import Dashboard from './components/Dashboard.jsx';
 import AdminProducts from './components/AdminProducts.jsx';
 import NotFound from './components/NotFound.jsx';
+import AdminFeaturedProducts from './components/AdminFeaturedProducts.jsx';
+import AdminDiscounts from './components/AdminDiscounts.jsx';
+import AdminOrders from './components/AdminOrders.jsx';
 
 function App() {
   const [cartItems, setCartItems] = useState([]);
@@ -34,6 +37,9 @@ function App() {
         <Route path='/admin' element={<AdminPage/>}>
           <Route index element={<Dashboard/>}/>
           <Route path='products' element={<AdminProducts/>} />
+          <Route path='featured' element={<AdminFeaturedProducts/>} />
+          <Route path='discounts' element={<AdminDiscounts/>} />
+          <Route path='orders' element={<AdminOrders/>} />
         </Route>
         <Route path='*' element={<NotFound/>} />
       </Routes>
