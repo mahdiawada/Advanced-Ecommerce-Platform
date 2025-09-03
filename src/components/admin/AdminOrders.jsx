@@ -2,6 +2,9 @@ import Inventory2OutlinedIcon from '@mui/icons-material/Inventory2Outlined';
 import RemoveRedEyeOutlinedIcon from '@mui/icons-material/RemoveRedEyeOutlined';
 import StarBorderIcon from '@mui/icons-material/StarBorder';
 import SearchIcon from '@mui/icons-material/Search';
+import AccessTimeIcon from '@mui/icons-material/AccessTime';
+import LocalShippingOutlinedIcon from '@mui/icons-material/LocalShippingOutlined';
+import CheckCircleOutlinedIcon from '@mui/icons-material/CheckCircleOutlined';
 
 export default function AdminOrders(){
     return (
@@ -24,21 +27,21 @@ export default function AdminOrders(){
             <div className="w-full h-35 border rounded-2xl bg-white shadow border-gray-300 box-border p-6 flex flex-col justify-between">
                 <div className='flex justify-between'>
                     <p className='font-medium text-gray-600'>Pending Orders</p>
-                    <RemoveRedEyeOutlinedIcon sx={{color:'green'}}/>
+                    <AccessTimeIcon sx={{color:'green'}}/>
                 </div>
                 <h1 className='text-2xl font-bold'>4</h1>
             </div>
             <div className="w-full h-35 border rounded-2xl bg-white shadow border-gray-300 box-border p-6 flex flex-col justify-between">
                 <div className='flex justify-between'>
                     <p className='font-medium text-gray-600'>Shipped Orders</p>
-                    <StarBorderIcon sx={{color:'gold'}}/>
+                    <LocalShippingOutlinedIcon sx={{color:'gold'}}/>
                 </div>
                 <h1 className='text-2xl font-bold'>2</h1>
             </div>
             <div className="w-full h-35 border rounded-2xl bg-white shadow border-gray-300 box-border p-6 flex flex-col justify-between">
                 <div className='flex justify-between'>
                     <p className='font-medium text-gray-600'>Total Revenue</p>
-                    <Inventory2OutlinedIcon sx={{color:'red'}}/>
+                    <CheckCircleOutlinedIcon sx={{color:'red'}}/>
                 </div>
                 <h1 className='text-2xl font-bold'>$4,596</h1>
             </div>

@@ -8,13 +8,15 @@ import CategoryPage from './components/CategoryPage.jsx';
 import ProductsContext from './context/ProductsContext.jsx';
 import products from './data/products.js';
 import { useState } from 'react';
-import AdminPage from './components/AdminPage.jsx';
-import Dashboard from './components/Dashboard.jsx';
-import AdminProducts from './components/AdminProducts.jsx';
+import AdminPage from './components/admin/AdminPage.jsx';
+import Dashboard from './components/admin/Dashboard.jsx';
+import AdminProducts from './components/admin/AdminProducts.jsx';
 import NotFound from './components/NotFound.jsx';
-import AdminFeaturedProducts from './components/AdminFeaturedProducts.jsx';
-import AdminDiscounts from './components/AdminDiscounts.jsx';
-import AdminOrders from './components/AdminOrders.jsx';
+import AdminFeaturedProducts from './components/admin/AdminFeaturedProducts.jsx';
+import AdminDiscounts from './components/admin/AdminDiscounts.jsx';
+import AdminOrders from './components/admin/AdminOrders.jsx';
+import AdminCustomers from './components/admin/AdminCustomers.jsx';
+import ProductDetails from './components/ProductDetails.jsx';
 
 function App() {
   const [cartItems, setCartItems] = useState([]);
@@ -33,13 +35,15 @@ function App() {
         <Route path='/home' element={<LandingPage/>} />
         <Route path='/cart' element={<Cart/>} />
         <Route path='/category/:name' element={<CategoryPage/>}/>
-        
+        <Route path='/product/:productId' element={<ProductDetails/>}/>
+
         <Route path='/admin' element={<AdminPage/>}>
           <Route index element={<Dashboard/>}/>
           <Route path='products' element={<AdminProducts/>} />
           <Route path='featured' element={<AdminFeaturedProducts/>} />
           <Route path='discounts' element={<AdminDiscounts/>} />
           <Route path='orders' element={<AdminOrders/>} />
+          <Route path='customers' element={<AdminCustomers/>} />
         </Route>
         <Route path='*' element={<NotFound/>} />
       </Routes>

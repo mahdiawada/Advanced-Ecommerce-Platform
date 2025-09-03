@@ -11,7 +11,8 @@ const products = [
     brand: "iPhone",
     details: "128GB Storage, 4GB RAM",
     quantity: 0,
-    isFeatured: true
+    isFeatured: true,
+    description: "The iPhone 11 features a titanium design, A17 Pro chip, and advanced camera system with 5x telephoto zoom."
   },
   {
     id: 2,
@@ -22,7 +23,8 @@ const products = [
     brand: "iPhone",
     details: "128GB Storage, 4GB RAM",
     quantity: 0,
-    isFeatured: false
+    isFeatured: false,
+    description: "A reliable and affordable iPhone model with great performance for everyday use."
   },
   {
     id: 3,
@@ -33,7 +35,8 @@ const products = [
     brand: "iPhone",
     details: "256GB Storage, 4GB RAM",
     quantity: 0,
-    isFeatured: false
+    isFeatured: false,
+    description: "A reliable and affordable iPhone model with great performance for everyday use."
   },
   {
     id: 4,
@@ -44,7 +47,8 @@ const products = [
     brand: "iPhone",
     details: "256GB Storage, 6GB RAM",
     quantity: 0,
-    isFeatured: false
+    isFeatured: false,
+    description: "A reliable and affordable iPhone model with great performance for everyday use."
   },
   {
     id: 5,
@@ -55,7 +59,8 @@ const products = [
     brand: "iPhone",
     details: "512GB Storage, 6GB RAM",
     quantity: 0,
-    isFeatured: true
+    isFeatured: true,
+    description: "A reliable and affordable iPhone model with great performance for everyday use."
   },
 
   // Samsung
@@ -68,7 +73,8 @@ const products = [
     brand: "Samsung",
     details: "128GB Storage, 6GB RAM",
     quantity: 0,
-    isFeatured: false
+    isFeatured: false,
+    description: "A reliable and affordable Samsung model with great performance for everyday use."
   },
   {
     id: 7,
@@ -79,7 +85,8 @@ const products = [
     brand: "Samsung",
     details: "256GB Storage, 8GB RAM",
     quantity: 0,
-    isFeatured: true
+    isFeatured: true,
+    description: "A reliable and affordable Samsung model with great performance for everyday use."
   },
   {
     id: 8,
@@ -90,7 +97,8 @@ const products = [
     brand: "Samsung",
     details: "512GB Storage, 12GB RAM",
     quantity: 0,
-    isFeatured: false
+    isFeatured: false,
+    description: "A reliable and affordable Samsung model with great performance for everyday use."
   },
   {
     id: 9,
@@ -101,7 +109,8 @@ const products = [
     brand: "Samsung",
     details: "256GB Storage, 8GB RAM",
     quantity: 0,
-    isFeatured: true
+    isFeatured: true,
+    description: "A reliable and affordable Samsung model with great performance for everyday use."
   },
   {
     id: 10,
@@ -112,7 +121,8 @@ const products = [
     brand: "Samsung",
     details: "128GB Storage, 6GB RAM",
     quantity: 0,
-    isFeatured: false
+    isFeatured: false,
+    description: "A reliable and affordable Samsung model with great performance for everyday use."
   },
 
   // Lenovo Laptops
@@ -125,7 +135,8 @@ const products = [
     brand: "Lenovo",
     details: "256GB SSD, 8GB RAM",
     quantity: 0,
-    isFeatured: true
+    isFeatured: true,
+    description: "A reliable and affordable Lenovo model with great performance for everyday use."
   },
   {
     id: 12,
@@ -136,10 +147,11 @@ const products = [
     brand: "Lenovo",
     details: "512GB SSD, 16GB RAM",
     quantity: 0,
-    isFeatured: false
+    isFeatured: false,
+    description: "A reliable and affordable Lenovo model with great performance for everyday use."
   },
 
-  // Apple Laptops
+  // Apple laptops
   {
     id: 13,
     name: "MacBook Air M1",
@@ -149,7 +161,8 @@ const products = [
     brand: "MacBook",
     details: "256GB SSD, 8GB RAM",
     quantity: 0,
-    isFeatured: true
+    isFeatured: true,
+    description: "A reliable and affordable MacBook model with great performance for everyday use."
   }
 ];
 

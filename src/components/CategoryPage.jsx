@@ -10,6 +10,7 @@ import { useParams } from 'react-router-dom';
 import ProductsContext from '../context/ProductsContext';
 import { useContext, useState } from 'react';
 import { CartContext } from '../context/CartContext';
+import { Link as ReactLink } from 'react-router-dom';
 
 function handleClick(event) {
   event.preventDefault();
@@ -53,15 +54,19 @@ export default function CategoryPage() {
   }
 
   const productsList = filteredProducts.map((product) => {
-    return (
+    return ( 
+                    
                     <div key={product.id} className="w-full bg-white rounded-2xl shadow-2xl overflow-hidden">
-                        <img src={product.image} alt={product.name} loading="lazy" className="block w-full aspect-[4/3] object-cover"  />
+                      <ReactLink key={product.id} to={`/product/${product.id}`}>
+                        <img src={product.image} alt={product.name} loading="lazy" className="block w-full aspect-[4/3] object-cover transition-transform duration-300 ease-in-out hover:scale-105 cursor-pointer hover:opacity-90"  />
+                        </ReactLink>
                         <div className="p-5 flex flex-col gap-4">
                           <div className="space-y-1">
                             <h2 className="text-xl font-bold m-0">{product.brand}</h2>
                             <p className="text-base m-0">{product.name}</p>
                             <p className="text-gray-500 m-0">{product.details}</p>
                           </div>
+                        
                           <div className="flex justify-between items-center">
                             <span className="text-2xl font-bold m-0">{product.price}$</span>
                             <button onClick={() => addToCart(product)} className="bg-blue-600 text-white px-3 py-2 rounded inline-flex items-center">
@@ -70,15 +75,15 @@ export default function CategoryPage() {
                             </button>
                           </div>
                         </div>
-                      </div> 
+                      </div>
                       )
                     })
 
   const capitalName = capitalizeWords(name);
     const breadcrumbs = [
-    <Link underline="hover" key="1" color="inherit" href="/" onClick={handleClick}>
+    <ReactLink to={'/'}  onClick={handleClick}>
       Home
-    </Link>,
+    </ReactLink>,
     <p className='text-black'>
       {capitalName}
     </p>,

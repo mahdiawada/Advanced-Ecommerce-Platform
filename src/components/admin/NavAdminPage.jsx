@@ -59,9 +59,11 @@ function ResponsiveDrawer(props) {
          <div className={`flex items-center rounded-2xl p-3 gap-2 hover:bg-gray-200 duration-150 ${location.pathname === "/admin/discounts" ? "bg-blue-100 text-blue-900" : "bg-white"}`}><LocalOfferOutlinedIcon/><p className='text-l font-extralight'>Discounts</p></div>
          </Link>
          <Link to={'/admin/orders'}>
-         <div className={`flex items-center rounded-2xl p-3 gap-2 hover:bg-gray-200 duration-150 ${location.pathname === "" ? "bg-blue-100 text-blue-900" : "bg-white"}`}><ShoppingCartOutlinedIcon/><p className='text-l font-extralight'>Orders</p></div>
+         <div className={`flex items-center rounded-2xl p-3 gap-2 hover:bg-gray-200 duration-150 ${location.pathname === "/admin/orders" ? "bg-blue-100 text-blue-900" : "bg-white"}`}><ShoppingCartOutlinedIcon/><p className='text-l font-extralight'>Orders</p></div>
          </Link>
-         <div className={`flex items-center rounded-2xl p-3 gap-2 hover:bg-gray-200 duration-150 ${location.pathname === "" ? "bg-blue-100 text-blue-900" : "bg-white"}`}><PeopleOutlineIcon/><p className='text-l font-extralight'>Customers</p></div>
+         <Link to={'/admin/customers'}>
+         <div className={`flex items-center rounded-2xl p-3 gap-2 hover:bg-gray-200 duration-150 ${location.pathname === "/admin/customers" ? "bg-blue-100 text-blue-900" : "bg-white"}`}><PeopleOutlineIcon/><p className='text-l font-extralight'>Customers</p></div>
+         </Link>
        </div>
       <Divider />
     </div>

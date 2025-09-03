@@ -108,7 +108,7 @@ export default function Nav() {
                           </Badge>
                         </li>
                     </Link>
-                    <button className='bg-gray-300 p-2 rounded-2xl hover:shadow-2xl hidden md:block'>Logout</button>
+                    <button className='bg-gray-200 p-2 rounded-2xl hover:shadow-2xl hidden md:block duration-100'>Logout</button>
                 </ul>
                 <div className='flex justify-center items-center gap-4 md:hidden'>
                     <button className='text-lg'>
